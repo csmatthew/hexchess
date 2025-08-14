@@ -2,11 +2,81 @@ body {
     margin: 0;
     padding: 0;
     background-color: #1a1a1a;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
     font-family: Arial, sans-serif;
+}
+
+/* Game container */
+#game-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+/* Theme definitions */
+:root {
+    /* Classic Chess Theme */
+    --classic-light: #F0D9B5;
+    --classic-dark: #B58863;
+    --classic-stroke: #8B4513;
+    
+    /* Forest Theme */
+    --forest-light: #90EE90;
+    --forest-dark: #228B22;
+    --forest-stroke: #006400;
+    
+    /* Ocean Theme */
+    --ocean-light: #87CEEB;
+    --ocean-dark: #4682B4;
+    --ocean-stroke: #191970;
+    
+    /* Sunset Theme */
+    --sunset-light: #FFE4B5;
+    --sunset-dark: #CD853F;
+    --sunset-stroke: #8B4513;
+    
+    /* Royal Theme */
+    --royal-light: #E6E6FA;
+    --royal-dark: #9370DB;
+    --royal-stroke: #4B0082;
+    
+    /* Monochrome Theme */
+    --mono-light: #F5F5F5;
+    --mono-dark: #696969;
+    --mono-stroke: #000000;
+}
+
+/* Theme selector buttons */
+.theme-button {
+    background-color: #444444;
+    border: 2px solid #888888;
+    color: white;
+    padding: 8px 16px;
+    margin: 5px;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 12px;
+}
+
+.theme-button:hover {
+    background-color: #666666;
+}
+
+.theme-button.active {
+    background-color: #888888;
+    border-color: #aaaaaa;
+}
+
+/* Game info */
+.game-info {
+    color: white;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.current-theme {
+    font-size: 16px;
+    margin-bottom: 10px;
 }
 
 canvas {
