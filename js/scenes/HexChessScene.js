@@ -1,5 +1,6 @@
 import { ThemeManager } from '../game/ThemeManager.js';
 import { HexGrid } from '../game/HexGrid.js';
+import { ChessPieces } from '../game/ChessPieces.js';
 
 export class HexChessScene extends Phaser.Scene {
     constructor() {
@@ -12,23 +13,28 @@ export class HexChessScene extends Phaser.Scene {
         // Initialize managers
         this.themeManager = new ThemeManager(this);
         this.hexGrid = new HexGrid(this, this.themeManager);
+        this.chessPieces = new ChessPieces(this, this.hexGrid);
         
         this.themeManager.createThemeButtons();
         this.hexGrid.createHexTextures();
+        this.chessPieces.createPieceTextures();
         
         console.log('Preload finished');
     }
 
     create() {
         console.log('Create started');
-        this.hexGrid.createSingleHex();
+        this.hexGrid.createFullBoard();
+        this.chessPieces.setupStartingPosition();
         console.log('Create finished');
     }
 
     onThemeChanged() {
         // Called by ThemeManager when theme changes
         this.hexGrid.createHexTextures();
-        this.hexGrid.createSingleHex();
+        this.chessPieces.createPieceTextures();
+        this.hexGrid.createFullBoard();
+        this.chessPieces.setupStartingPosition();
     }
 
     update() {
