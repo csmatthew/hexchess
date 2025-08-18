@@ -67,6 +67,22 @@ body {
     border-color: #aaaaaa;
 }
 
+/* Dev mode specific buttons */
+.theme-button.dev-mode-toggle {
+    font-weight: bold;
+    border-width: 3px;
+}
+
+.theme-button.dev-control {
+    background-color: #333333;
+    border-color: #666666;
+    font-size: 11px;
+}
+
+.theme-button.dev-control:hover {
+    background-color: #555555;
+}
+
 /* Game info */
 .game-info {
     color: white;
