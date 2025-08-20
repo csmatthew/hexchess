@@ -11,29 +11,21 @@ export class ChessPieces {
         return {
             // White pieces (bottom half of board)
             white: {
-                pawns: [37, 38, 39, 40, 41, 42, 43, 44, 45], // 9 pawns
-                rooks: [26, 35],
-                knights: [27, 34],
-                bishops: [28, 33],
-                queen: 29,
-                king: 30,
-                // Additional pieces for outer ring
-                rook2: 31,
-                knight2: 32,
-                bishop2: 36
+                pawns: [85, 56, 33, 16, 5, 14, 29, 50, 77], // 9 pawns
+                rooks: [84, 78],
+                knights: [83, 79],
+                bishops: [81, 53, 31],
+                queen: 82,
+                king: 80,
             },
             // Black pieces (top half of board)
             black: {
-                pawns: [46, 47, 48, 49, 50, 51, 52, 53, 54], // 9 pawns
-                rooks: [55, 64],
-                knights: [56, 63],
-                bishops: [57, 62],
-                queen: 58,
-                king: 59,
-                // Additional pieces for outer ring
-                rook2: 60,
-                knight2: 61,
-                bishop2: 65
+                pawns: [70, 44, 24, 10, 2, 8, 20, 38, 62], // 9 pawns
+                rooks: [69, 63],
+                knights: [68, 64],
+                bishops: [66, 41, 22],
+                queen: 67,
+                king: 65,
             }
         };
     }
