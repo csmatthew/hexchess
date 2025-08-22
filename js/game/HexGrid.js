@@ -249,6 +249,12 @@ export class HexGrid {
     addHexEventHandlers(hexSprite) {
         hexSprite.on('pointerdown', () => {
             console.log(`Hex clicked! Spiral index: ${hexSprite.hexData.spiralIndex}, Cube: (${hexSprite.hexData.cube.q}, ${hexSprite.hexData.cube.r}, ${hexSprite.hexData.cube.s})`);
+            
+            // Use GameLogic to handle selection
+            if (this.scene.gameLogic) {
+                this.scene.gameLogic.handleHexSelection(hexSprite);
+            }
+            
             this.selectHex(hexSprite);
         });
         
